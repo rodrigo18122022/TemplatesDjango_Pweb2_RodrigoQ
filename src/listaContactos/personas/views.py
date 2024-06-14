@@ -22,3 +22,6 @@ def personaCreateView(request):
 
 def searchForHelp(request):
     return render(request, 'personas/search.html', {})
+
+def contactView(request):
+    return render(request, 'personas/contact.html', {})
