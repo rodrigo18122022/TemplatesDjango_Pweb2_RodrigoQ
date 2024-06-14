@@ -1,0 +1,29 @@
+Pruebe qué ocurre si no incluímos el campo “donador” en el formulario
+
+Si no incluimos el campo "donador" en el formulario y el campo es obligatorio en el modelo, al enviar el formulario se producirá un error de integridad de la base de datos (IntegrityError), ya que el campo no puede ser nulo.
+
+
+
+¿De qué se trata este error? 
+
+Este error es un IntegrityError, que indica que el campo "donador" en la tabla personas_persona no puede ser nulo. Este error ocurre porque el formulario no proporciona un valor para el campo "donador" y el modelo no permite que este campo sea nulo.
+
+
+
+¿Cómo se puede solucionar?
+
+Este problema se puede solucionar de varias maneras:
+
+Incluir el campo "donador" en el formulario: Asegurarse de que todos los campos obligatorios del modelo están presentes en el formulario.
+Proporcionar un valor por defecto: Actualizar el modelo Persona para que el campo "donador" tenga un valor por defecto, lo que evitará que sea nulo cuando se crea una nueva instancia sin especificar un valor para este campo.
+
+
+
+
+Del ejemplo anterior vemos que la vista se llama primero con GET y luego con POST ¿En qué momento se hace llamada GET y en qué momento se hace la llamada POST?
+
+La llamada GET ocurre cuando se accede por primera vez a una URL para solicitar una página web. En nuestro caso, cuando se navega a http://127.0.0.1:8000/agregar/, se realiza una solicitud GET y el servidor responde enviando la página personasCreate.html con el formulario.
+
+La llamada POST ocurre cuando se envía el formulario completado. Al enviar el formulario en personasCreate.html, se realiza una solicitud POST, y el servidor recibe y procesa los datos enviados.
+
+En resumen, la llamada GET se utiliza para obtener y mostrar la página con el formulario, mientras que la llamada POST se utiliza para enviar y procesar los datos del formulario.
